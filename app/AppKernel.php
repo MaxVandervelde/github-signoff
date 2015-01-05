@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new InkApplications\SignOff\CLIBundle\InkSignOffCliBundle(),
             new InkApplications\SignOff\Api\InkSignOffApiBundle(),
+            new InkApplications\SignOff\WebBundle\InkSignOffWebBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

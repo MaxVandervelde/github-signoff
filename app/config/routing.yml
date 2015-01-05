@@ -1,0 +1,5 @@
+ink_sign_off_web:
+    resource: "@InkSignOffWebBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
