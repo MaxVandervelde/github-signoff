@@ -1,4 +1,21 @@
 services:
-#    ink_request_prcli.example:
-#        class: InkApplications\RequestPR\CLIBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    github.endpoint.statuses:
+        class: InkApplications\RequestPR\CLIBundle\GitHub\StatusEndpoint
+        arguments:
+            - @github.api.statuses
+
+    github.api.client:
+        class: Github\Client
+        factory:
+            - InkApplications\RequestPR\CLIBundle\GitHub\ApiFactory
+            - createAuthenticatedApi
+        arguments:
+            - %github_api_key%
+
+    github.api.statuses:
+        class: Github\Api\Repository\Statuses
+        factory:
+            - InkApplications\RequestPR\CLIBundle\GitHub\ApiFactory
+            - createStatusesApi
+        arguments:
+            - @github.api.client

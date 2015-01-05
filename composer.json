@@ -19,7 +19,7 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "phpunit/phpunit": "~4.4",
-        "guzzlehttp/guzzle": "5.1.0"
+        "knplabs/github-api": "1.4.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

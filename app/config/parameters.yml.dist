@@ -18,3 +18,7 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    github_api_key: ~
+    github_repo_owner: ~
+    github_repo_name: ~
