@@ -4,7 +4,7 @@
  * Distributed under the MIT License (http://opensource.org/licenses/MIT)
  */
 
-namespace InkApplications\RequestPR\CLIBundle\GitHub;
+namespace InkApplications\SignOff\Api\GitHub;
 
 use Github\Api\Repository\Statuses;
 
@@ -16,7 +16,7 @@ use Github\Api\Repository\Statuses;
 class StatusEndpoint
 {
     const CONTEXT = 'Signoff';
-    
+
     /**
      * @var Statuses
      */

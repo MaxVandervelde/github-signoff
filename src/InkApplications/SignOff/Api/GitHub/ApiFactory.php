@@ -4,7 +4,7 @@
  * Distributed under the MIT License (http://opensource.org/licenses/MIT)
  */
 
-namespace InkApplications\RequestPR\CLIBundle\GitHub;
+namespace InkApplications\SignOff\Api\GitHub;
 
 use Github\Api\Repo;
 use Github\Api\Repository\Statuses;

@@ -20,5 +20,3 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     github_api_key: ~
-    github_repo_owner: ~
-    github_repo_name: ~

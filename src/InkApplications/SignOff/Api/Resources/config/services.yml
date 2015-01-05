@@ -1,13 +1,13 @@
 services:
     github.endpoint.statuses:
-        class: InkApplications\RequestPR\CLIBundle\GitHub\StatusEndpoint
+        class: InkApplications\SignOff\Api\GitHub\StatusEndpoint
         arguments:
             - @github.api.statuses
 
     github.api.client:
         class: Github\Client
         factory:
-            - InkApplications\RequestPR\CLIBundle\GitHub\ApiFactory
+            - InkApplications\SignOff\Api\GitHub\ApiFactory
             - createAuthenticatedApi
         arguments:
             - %github_api_key%
@@ -15,7 +15,7 @@ services:
     github.api.statuses:
         class: Github\Api\Repository\Statuses
         factory:
-            - InkApplications\RequestPR\CLIBundle\GitHub\ApiFactory
+            - InkApplications\SignOff\Api\GitHub\ApiFactory
             - createStatusesApi
         arguments:
             - @github.api.client

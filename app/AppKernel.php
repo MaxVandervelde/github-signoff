@@ -16,7 +16,8 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new InkApplications\RequestPR\CLIBundle\InkRequestPRCLIBundle(),
+            new InkApplications\SignOff\CLIBundle\InkSignOffCliBundle(),
+            new InkApplications\SignOff\Api\InkSignOffApiBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

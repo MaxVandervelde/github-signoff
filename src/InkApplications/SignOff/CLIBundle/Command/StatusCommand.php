@@ -4,9 +4,9 @@
  * Distributed under the MIT License (http://opensource.org/licenses/MIT)
  */
 
-namespace InkApplications\RequestPR\CLIBundle\Command;
+namespace InkApplications\SignOff\CLIBundle\Command;
 
-use InkApplications\RequestPR\CLIBundle\GitHub\StatusEndpoint;
+use InkApplications\SignOff\Api\GitHub\StatusEndpoint;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -36,7 +36,7 @@ class StatusCommand extends ContainerAwareCommand
         $repository = $input->getArgument('repository');
         $commit = $input->getArgument('commit');
         $status = $input->getArgument('status');
-        
+
         /** @var StatusEndpoint $api */
         $api = $this->getContainer()->get('github.endpoint.statuses');
 

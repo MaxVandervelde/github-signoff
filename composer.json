@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "inkapplications/github-signoff",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "A service that checks pull-requests on GitHub for approval status",
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
@@ -18,10 +18,10 @@
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
-        "phpunit/phpunit": "~4.4",
         "knplabs/github-api": "1.4.1"
     },
     "require-dev": {
+        "phpunit/phpunit": "~4.4",
         "sensio/generator-bundle": "~2.3"
     },
     "scripts": {
