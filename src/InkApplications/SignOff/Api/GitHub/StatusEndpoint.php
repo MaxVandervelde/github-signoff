@@ -31,33 +31,45 @@ class StatusEndpoint
         $this->client = $client;
     }
 
-    public function markSuccessful($owner, $repo, $commit)
+    public function markSuccessful($owner, $repo, $commit, $description = null)
     {
         $this->client->create(
             $owner,
             $repo,
             $commit,
-            ['state' => 'success', 'context' => self::CONTEXT]
+            [
+                'state' => 'success',
+                'context' => self::CONTEXT,
+                'description' => $description,
+            ]
         );
     }
 
-    public function markFailure($owner, $repo, $commit)
+    public function markFailure($owner, $repo, $commit, $description = null)
     {
         $this->client->create(
             $owner,
             $repo,
             $commit,
-            ['state' => 'failure', 'context' => self::CONTEXT]
+            [
+                'state' => 'failure',
+                'context' => self::CONTEXT,
+                'description' => $description,
+            ]
         );
     }
 
-    public function markPending($owner, $repo, $commit)
+    public function markPending($owner, $repo, $commit, $description = null)
     {
         $this->client->create(
             $owner,
             $repo,
             $commit,
-            ['state' => 'pending', 'context' => self::CONTEXT]
+            [
+                'state' => 'pending',
+                'context' => self::CONTEXT,
+                'description' => $description,
+            ]
         );
     }
 }

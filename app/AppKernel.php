@@ -19,6 +19,9 @@ class AppKernel extends Kernel
             new InkApplications\SignOff\CLIBundle\InkSignOffCliBundle(),
             new InkApplications\SignOff\Api\InkSignOffApiBundle(),
             new InkApplications\SignOff\WebBundle\InkSignOffWebBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
+            new JMS\AopBundle\JMSAopBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
